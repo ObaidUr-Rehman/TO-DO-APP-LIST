@@ -4,7 +4,6 @@ var task=document.getElementById("task");
 
 var data=[];
 
-
 function alltask(id,taskname){
     this.id=id;
     this.task=taskname;
@@ -25,10 +24,8 @@ var p=document.createElement("p");
 all.appendChild(p);
 
 
-
 var li = document.createElement('li');
     li.setAttribute("id",Math.random() *2);
-
 
 function add() {
 
@@ -39,9 +36,7 @@ function add() {
     console.log(data);
 
  
-    
-
-
+   
     var list=document.createElement("ol");
     list.setAttribute("id","mylist");
     all.appendChild(list);
@@ -78,12 +73,6 @@ function add() {
     var edittext=document.createTextNode("Edit")
     
 
-
-    
-
-
-
-
     del.appendChild(deltext)
     list.appendChild(del)
     editbtn.setAttribute("onClick",'edittask(event)')
@@ -101,12 +90,9 @@ function removetask(event){
 
 
 
-
 function edittask(event){
     var edit=event.target.parentElement.childNodes[0].textContent;
     task.value = edit;
-
-
 
 
     var update=document.createElement("button");
@@ -115,12 +101,11 @@ function edittask(event){
     update.setAttribute("onclick",`updatetask()`)
 
     
-   
-    input.appendChild(update);
+  
+   input.appendChild(update);
 
-    console.log(li.id)
+   console.log(li.id)
     
-
 
 }
 
@@ -131,6 +116,5 @@ function updatetask() {
     
     // edit.parentElement;
     task.value="";
-    update.style.display="none";
-    
+    update.style.display="none"; 
 }
